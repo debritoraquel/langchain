@@ -7,17 +7,26 @@ pipelines de visão computacional.
 ## Requisitos
 
 ```bash
-pip install pymupdf pillow
+python -m pip install pymupdf pillow
 ```
 
 ## Como executar no VS Code (Windows)
 
 1. Abra o terminal integrado do VS Code no seu ambiente.
-2. Execute o script apontando para a pasta de artigos e para um diretório de saída:
+2. Instale as dependências no terminal (não no Run/Debug):
 
-```bash
-python cookbook/hifomicetos_extraction/extract_hifomicetos.py \
-  --input-dir "D:/MBA/tcc/REFERENCIAS/CHAVES HIFOMICETOS" \
+```powershell
+python -m pip install pymupdf pillow
+```
+
+3. Execute o script apontando para a pasta de artigos e para um diretório de saída.
+
+> **Importante (PowerShell):** não use `\` para quebrar linha. Use uma linha única ou o
+> acento grave `` ` `` para continuação.
+
+```powershell
+python cookbook/hifomicetos_extraction/extract_hifomicetos.py `
+  --input-dir "D:/MBA/tcc/REFERENCIAS/CHAVES HIFOMICETOS" `
   --output-dir "D:/MBA/tcc/OUTPUT_HIFOMICETOS"
 ```
 
@@ -32,12 +41,16 @@ O repositório inclui uma configuração de depuração em `.vscode/launch.json`
    for diferente.
 4. Clique em **Run** (ou **F5**) para executar.
 
+Se você vir erros do tipo `SyntaxError: invalid syntax` apontando para um arquivo chamado
+`pip install ... .py`, significa que o comando de instalação foi executado pelo depurador
+como se fosse um script. Execute a instalação apenas no terminal integrado (passo 2).
+
 Se quiser priorizar espécies específicas (opcional):
 
-```bash
-python cookbook/hifomicetos_extraction/extract_hifomicetos.py \
-  --input-dir "D:/MBA/tcc/REFERENCIAS/CHAVES HIFOMICETOS" \
-  --output-dir "D:/MBA/tcc/OUTPUT_HIFOMICETOS" \
+```powershell
+python cookbook/hifomicetos_extraction/extract_hifomicetos.py `
+  --input-dir "D:/MBA/tcc/REFERENCIAS/CHAVES HIFOMICETOS" `
+  --output-dir "D:/MBA/tcc/OUTPUT_HIFOMICETOS" `
   --species "Lunulospora curvula" "Triscelophorus monosporus"
 ```
 
