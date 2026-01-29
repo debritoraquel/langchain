@@ -21,6 +21,17 @@ python cookbook/hifomicetos_extraction/extract_hifomicetos.py \
   --output-dir "D:/MBA/tcc/OUTPUT_HIFOMICETOS"
 ```
 
+### Integração via Run and Debug
+
+O repositório inclui uma configuração de depuração em `.vscode/launch.json` chamada
+**Hifomicetos: Extrair PDFs**. Para usar:
+
+1. Abra o painel **Run and Debug** no VS Code.
+2. Selecione **Hifomicetos: Extrair PDFs**.
+3. Ajuste os argumentos no `launch.json` se o caminho dos PDFs ou do diretório de saída
+   for diferente.
+4. Clique em **Run** (ou **F5**) para executar.
+
 Se quiser priorizar espécies específicas (opcional):
 
 ```bash
