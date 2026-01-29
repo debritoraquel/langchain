@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Hifomicetos: Extrair PDFs",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/cookbook/hifomicetos_extraction/extract_hifomicetos.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": [
+        "--input-dir",
+        "D:/MBA/tcc/REFERENCIAS/CHAVES HIFOMICETOS",
+        "--output-dir",
+        "D:/MBA/tcc/OUTPUT_HIFOMICETOS"
+      ]
+    }
+  ]
+}
